@@ -1,9 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.mastered {
-  margin-top: 5rem;
+.masthead {
+    background-color: #f8f9fa;
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+
 }
 
 .bg-indigo {
-  background-color: indigo;
+    background-color: indigo;
 }
 
+.bg-gradient-primary-to-secondary {
+    background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;
+}
+
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #fff;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-apple {
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont;
+}
+
+
+.fw-900 {
+    font-weight: 800;
+
+}
