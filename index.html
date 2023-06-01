@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,7 +24,7 @@
 
     <!-- ============================ Navigation ============================ -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
+        <div class="container px-5 py-2">
             <a class="navbar-brand fw-bold" href="#page-top">Montaż filmów</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -42,6 +42,7 @@
                         <span class="small">Formularz kontaktowy</span>
                     </span>
                 </button>
+                
             </div>
         </div>
     </nav>
@@ -55,8 +56,8 @@
                 <div class="col-lg-5">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 mb-3">Montujemy filmy.</h1>
-                        <p class="lead fw-normal text-muted mb-5 fw-800">Zajmujemy się montowaniem przeróżnych filmów! Od podróżniczych po teledyski muzyczne!</p>
+                        <h1 class="display-1 mb-3 font-roboto fw-900">Montujemy filmy.</h1>
+                        <p class="lead fw-normal text-muted mb-5 ">Zajmujemy się montowaniem przeróżnych filmów! Od podróżniczych po teledyski muzyczne!</p>
 
                     </div>
                 </div>
@@ -87,8 +88,44 @@
     </section>
 
 
+    <!-- ============================ SECTION 2 SLIDER ============================ -->
 
-    <!-- ============================ SECTION 2 ============================ -->
+    <section class="">
+        <div class="container-md px-5 py-5">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/slider/slide-img-1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider/slide-img-2.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider/slide-img-3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <!-- ============================ SECTION 3 ============================ -->
     <section class="bg-white">
         <div class="container-md px-5 py-5">
             <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
@@ -104,12 +141,14 @@
     </section>
 
 
-    <!-- ============================ SECTION 3 FORMS ============================ -->
 
+
+
+    <!-- ============================ SECTION 4 FORMS ============================ -->
     <section class="bg-light py-5" id="formularz">
         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
             <div class="container-sm w-25">
-                <div class="h3">
+                <div class="h3 pb-4">
                     Chcesz współpracować? Odezwij się!
                 </div>
                 <!-- Name input-->
@@ -148,10 +187,6 @@
 
 
 
-
-
-
-
     <!-- App badge section-->
     <section class="bg-gradient-primary-to-secondary" id="download">
         <div class="container px-5">
@@ -179,10 +214,13 @@
     </footer>
 
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>

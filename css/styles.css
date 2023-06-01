@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .masthead {
     background-color: #f8f9fa;
@@ -26,11 +26,11 @@
 }
 
 .font-apple {
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont;
+    font-family: 'Kanit', sans-serif;
 }
 
 
 .fw-900 {
-    font-weight: 800;
+    font-weight: 900;
 
 }
