@@ -28,8 +28,10 @@
             <div class="container">
                 
                 <a class="navbar-brand fw-bold" href="#page-top">
-                    <img src="img/video-icon.png" alt="" class="img-fluid small-icon ">
-                    Montaż filmów
+                    <div class="d-flex flex-row align-items-center justify-content-center w-100">
+                        <img src="img/video-icon.png" alt="" class="img-fluid small-icon px-1">
+                        Montaż filmów
+                    </div>
                 </a>
             </div>
             
@@ -37,19 +39,21 @@
                 Menu
                 <i class="bi-list"></i>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#galeria">Galeria</a></li>
+                    <li class="nav-item "><a class=" nav-link me-lg-3 " href="#omnie">Opis </a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#kontakt">Kontakt</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
                 </ul>
-                
+
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <a class="d-flex align-items-center nav-link" href="#formularz">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Formularz kontaktowy</span>
+                        <span class="small fw-bold">Formularz kontaktowy</span>
                     </a>
                 </button>
+
                 
             </div>
         </div>
@@ -58,7 +62,8 @@
 
 
     <!-- ============================ HEADER ============================ -->
-    <header class="masthead">
+    <header class="masthead ">
+
         <div class="container-md">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-5">
@@ -78,8 +83,8 @@
                 </div>
             </div>
         </div>
-    </header>
 
+    </header>
 
 
     <!-- ============================ SECTION 1 ============================ -->
@@ -96,11 +101,11 @@
     </section>
 
 
-    <!-- ============================ SECTION 2 SLIDER ============================ -->
+    <!-- ============================ SECTION 2 GALERIA ============================ -->
 
-    <section class="py-5" id="galeria">
+    <section class="pt-5" id="galeria">
         <div class="h1 text text-center" >Galeria</div>
-        <div class="container-md px-5 py-5">
+        <div class="container-sm px-5 py-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -134,9 +139,9 @@
     
 
 
-    <!-- ============================ SECTION 3 ============================ -->
-    <section class="bg-white">
-        <div class="container-md px-5 py-5">
+    <!-- ============================ SECTION 3 O MNIE ============================ -->
+    <section class="bg-white px-5 py-5 mb-5" id="omnie">
+        <div class="container-md">
             <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                 <div class="col-12 col-lg-5">
                     <div class="display-4 h1">O mnie</div>
@@ -156,7 +161,7 @@
     <!-- ============================ SECTION 4 FORMS ============================ -->
     <section class="bg-light py-5" id="formularz">
         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-            <div class="container-sm w-25">
+            <div class="container-md w-50">
                 <div class="h3 pb-4">
                     Chcesz współpracować? Odezwij się!
                 </div>
@@ -193,26 +198,43 @@
     </section>
     
 
-    
+
 
     <!-- ============================ KONTAKT ============================ -->
-    <section class="bg-gradient-primary-to-secondary py-4" id="kontakt">
+    <section class="bg-gradient-primary-to-secondary py-5" id="kontakt">
         <div class="container px-5">
-            <h2 class="text-center text-white font-alt mb-4">Kontakt</h2>
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around text-white">
-                <div class="">Nr telefonu</div>
-                <div>Adres</div>
-                <div>Email</div>
+            <div class="text-center text-white font-alt mb-5 h1">Kontakt</div>
+            <div class="row gx-4 align-items-center text-white">    
+                <div class="col-lg-4 h3 text-center pb-3">
+                    📞 Nr telefonu:
+                    <div class="fw-normal h4"> 632 573 962 </div>
+                </div>
+
+                <div class="col-lg-4 h3 text-center pb-3">
+                    📍 Adres
+                    <div class="fw-normal h4"> Lublin, ul. Nadbystrzycka 36 </div>
+                </div>
+
+                <div class="col-lg-4 h3 text-center pb-3">
+                    📧 Email
+                    <div class="fw-normal h4"> s97764@pollub.edu.pl </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="container-fluid">
+        <div class="d-flex align-items-center justify-content-center w-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2060.611709526552!2d22.54952655966301!3d51.23504060659546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722577729316bd9%3A0x442236391b743bc!2sPolitechnika%20Lubelska%2C%2020-618%20Lublin!5e0!3m2!1spl!2spl!4v1685704171562!5m2!1spl!2spl" width="4000" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </section>
+
 
 
 
 
     <!-- ============================ FOOTER ============================ -->
     <footer class="bg-black text-center py-5">
-        <div class="container px-5">
+        <div class="container-md px-5">
             <div class="text-white-50 small">
                 <div class="mb-2">&copy; Szymon Wierzchoś. All Rights Reserved.</div>
                 <a href="#!">Privacy</a>
