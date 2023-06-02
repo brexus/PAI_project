@@ -34,3 +34,12 @@
     font-weight: 900;
 
 }
+
+.small-icon {
+    width: 3rem;
+}
+
+.logo-container {
+    display: flex;
+
+}

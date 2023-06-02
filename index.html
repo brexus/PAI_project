@@ -22,25 +22,33 @@
 
 <body id="page-top">
 
-    <!-- ============================ Navigation ============================ -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <!-- ============================ NAVBAR ============================ -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm " id="mainNav">
         <div class="container px-5 py-2">
-            <a class="navbar-brand fw-bold" href="#page-top">Montaż filmów</a>
+            <div class="container">
+                
+                <a class="navbar-brand fw-bold" href="#page-top">
+                    <img src="img/video-icon.png" alt="" class="img-fluid small-icon ">
+                    Montaż filmów
+                </a>
+            </div>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#formularz">Formularz</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#kontakt">Kontakt</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
                 </ul>
+                
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                    <span class="d-flex align-items-center">
+                    <a class="d-flex align-items-center nav-link" href="#formularz">
                         <i class="bi-chat-text-fill me-2"></i>
                         <span class="small">Formularz kontaktowy</span>
-                    </span>
+                    </a>
                 </button>
                 
             </div>
@@ -90,7 +98,8 @@
 
     <!-- ============================ SECTION 2 SLIDER ============================ -->
 
-    <section class="">
+    <section class="py-5" id="galeria">
+        <div class="h1 text text-center" >Galeria</div>
         <div class="container-md px-5 py-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -130,8 +139,8 @@
         <div class="container-md px-5 py-5">
             <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                 <div class="col-12 col-lg-5">
-                    <h2 class="display-4 lh-1 mb-4">Enter a new age of web design</h2>
-                    <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p>
+                    <div class="display-4 h1">O mnie</div>
+                    <p class="lead fw-normal text-muted mb-5 mb-lg-0"> Jestem filmowcem z pasją i doświadczeniem, zajmującym się montażem filmów od wielu lat. Moje umiejętności i wiedza w tej dziedzinie pozwalają mi tworzyć niezapomniane filmy, które oddają emocje i narrację w sposób pełen wizji artystycznej. Montażem zajmuję się od blisko 9 lat i dalej się w tym rozwijam.</p>
                 </div>
                 <div class="col-sm-8 col-md-6">
                     <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="img/premiere-pro-1.jpg" alt="..." /></div>
@@ -184,19 +193,21 @@
     </section>
     
 
+    
 
-
-
-    <!-- App badge section-->
-    <section class="bg-gradient-primary-to-secondary" id="download">
+    <!-- ============================ KONTAKT ============================ -->
+    <section class="bg-gradient-primary-to-secondary py-4" id="kontakt">
         <div class="container px-5">
-            <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+            <h2 class="text-center text-white font-alt mb-4">Kontakt</h2>
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around text-white">
+                <div class="">Nr telefonu</div>
+                <div>Adres</div>
+                <div>Email</div>
             </div>
         </div>
     </section>
+
+
 
 
     <!-- ============================ FOOTER ============================ -->
