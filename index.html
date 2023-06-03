@@ -161,69 +161,78 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="validationCustom04" value="Otto" required />
+                    <input type="tel" class="form-control" id="validationCustom04" value="Otto" required />
                     <label for="validationCustom04" class="form-label">Numer telefonu</label>
                     <div class="valid-feedback">Looks good!</div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col">
                     <div class="form-floating">
                         <input type="text" class="form-control" id="validationCustom03" required />
-                        <label for="validationCustom03" class="form-label">City</label>
+                        <label for="validationCustom03" class="form-label">Miasto</label>
                         <div class="invalid-feedback">Please provide a valid city.</div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="validationCustom05" required />
-                        <label for="validationCustom05" class="form-label">Zip</label>
-                        <div class="invalid-feedback">Please provide a valid zip.</div>
+                <!-- RADIO -->
+                <div class="form-floating my-3">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="validationFormCheck1" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationFormCheck1">Max 5 dni</label>
+                    </div>
+
+                    <div class="form-check mb-3 form-check-inline">
+                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationFormCheck2"> Max 7 dni</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
+                    </div>
+
+                    <div class="form-check mb-3 form-check-inline">
+                        <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationFormCheck3"> Max 10 dni</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
+                    </div>
+
+                    <div class="form-check mb-3 form-check-inline">
+                        <input type="radio" class="form-check-input" id="validationFormCheck4" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationFormCheck4"> Max 14 dni</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
                     </div>
                 </div>
-                
-                <div class="form-check">
-                    <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-                    <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
-                    </div>
-                    <div class="form-check mb-3">
-                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
-                    <div class="invalid-feedback">More example invalid feedback text</div>
-                </div>
-                
+                <!-- /RADIO -->
+
+
                 <div class="mb-3">
-                    <select class="form-select" required aria-label="select example">
-                        <option value="">Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <label class="form-check" for="validationFormCheck5"> Rodzaj filmu</label>
+                    <select class="form-select" required aria-label="select example" id="validationFormCheck5">
+                        <option disabled selected value style="display:none">-- Wybierz --</option>
+                        <option>Podróżniczy</option>
+                        <option>Vlog</option>
+                        <option>Teledysk</option>
+                        <option>Relacja z eventu</option>
                     </select>
                     <div class="invalid-feedback">Example invalid select feedback</div>
                 </div>
-                
-                
-                
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                        <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                    </div>
-                </div>
 
                 <div class="mb-3">
-                    <label for="validationTextarea" class="form-label">Textarea</label>
-                    <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                    <label for="validationTextarea" class="form-label">Treść</label>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
                     <div class="invalid-feedback">
                     Please enter a message in the textarea.
                     </div>
                 </div>
 
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                        <label class="form-check-label" for="invalidCheck">Potwierdzam dane</label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                </div>
 
 
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <button class="btn btn-primary" type="submit">Wyślij</button>
                 </div>
             </div>
         </form>
