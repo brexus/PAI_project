@@ -24,7 +24,7 @@
 <body id="page-top">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-lg">
         <div class="container">
             
             <img src="/img/video-icon.png" alt="" class="small-icon">
@@ -136,158 +136,158 @@
             <h1 class="display-6 fw-bold text-center pb-4">
                 Chcesz współpracować? Odezwij się!
             </h1>
+            
             <form class="row g-3 needs-validation" novalidate>
+                
+                <!-- IMIE I NAZWISKO -->
+                <div class="form-group row g-4">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="validationCustom01" value="" required />
+                            <label for="validationCustom01" class="form-label">Imię</label>
+                            <div class="valid-feedback">Wygląda dobrze!</div>
+                            <div class="invalid-feedback">Proszę podaj poprawne imię.</div>
+                        </div>
+                    </div>
 
-                <div class="col-md-6">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required />
-                        <label for="validationCustom01" class="form-label">Imię</label>
-                        <div class="valid-feedback">Looks good!</div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="validationCustom02" value="" required />
+                            <label for="validationCustom02" class="form-label">Nazwisko</label>
+                            <div class="valid-feedback">Wygląda dobrze!</div>
+                            <div class="invalid-feedback">Proszę podaj poprawne nazwisko.</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required />
-                        <label for="validationCustom02" class="form-label">Nazwisko</label>
-                        <div class="valid-feedback">Looks good!</div>
-                    </div>
-                </div>
-
+                
+                <!-- EMAIL -->
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="validationCustom03" value="Otto" required />
+                    <input type="email" class="form-control" id="validationCustom03" value="" required />
                     <label for="validationCustom03" class="form-label">Email</label>
-                    <div class="valid-feedback">Looks good!</div>
+                    <div class="valid-feedback">Wygląda dobrze!</div>
+                    <div class="invalid-feedback">Proszę podaj poprawny email.</div>
                 </div>
 
+                <!-- TELEFON -->
                 <div class="form-floating mb-3">
-                    <input type="tel" class="form-control" id="validationCustom04" value="Otto" required />
+                    <input type="tel" class="form-control" id="validationCustom04" value="" required />
                     <label for="validationCustom04" class="form-label">Numer telefonu</label>
-                    <div class="valid-feedback">Looks good!</div>
+                    <div class="valid-feedback">Wygląda dobrze!</div>
+                    <div class="invalid-feedback">Proszę podaj poprawny numer telefonu.</div>
                 </div>
 
+                <!-- MIASTO -->
                 <div class="col">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="validationCustom03" required />
-                        <label for="validationCustom03" class="form-label">Miasto</label>
-                        <div class="invalid-feedback">Please provide a valid city.</div>
+                        <input type="text" class="form-control" id="validationCustom05" required />
+                        <label for="validationCustom05" class="form-label">Miasto</label>
+                        <div class="valid-feedback">Wygląda dobrze!</div>
+                        <div class="invalid-feedback">Proszę podaj poprawne miasto.</div>
                     </div>
                 </div>
 
                 <!-- RADIO -->
-                <div class="form-floating my-3">
+                <div class="form-floating text-center my-3">
+                    <h6>Czas wykonania:</h6>
                     <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationFormCheck1" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck1">Max 5 dni</label>
+                        <input type="radio" class="form-check-input" id="validationCustom06" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationCustom06">Max 5 dni</label>
+                        <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck2"> Max 7 dni</label>
-                        <div class="invalid-feedback">More example invalid feedback text</div>
+                        <input type="radio" class="form-check-input" id="validationCustom07" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationCustom07"> Max 7 dni</label>
+                        <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck3"> Max 10 dni</label>
-                        <div class="invalid-feedback">More example invalid feedback text</div>
+                        <input type="radio" class="form-check-input" id="validationCustom08" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationCustom08"> Max 10 dni</label>
+                        <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationFormCheck4" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck4"> Max 14 dni</label>
-                        <div class="invalid-feedback">More example invalid feedback text</div>
+                        <input type="radio" class="form-check-input" id="validationCustom09" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationCustom09"> Max 14 dni</label>
+                        <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
                 </div>
-                <!-- /RADIO -->
+                
 
-
-                <div class="mb-3">
-                    <label class="form-check" for="validationFormCheck5"> Rodzaj filmu</label>
-                    <select class="form-select" required aria-label="select example" id="validationFormCheck5">
-                        <option disabled selected value style="display:none">-- Wybierz --</option>
-                        <option>Podróżniczy</option>
-                        <option>Vlog</option>
-                        <option>Teledysk</option>
-                        <option>Relacja z eventu</option>
+                <!-- SELECT - RODZAJ FILMU -->
+                <div class="form-floating">
+                    <select class="form-select" id="validationCustom10" aria-label="Floating label select example">
+                        <!-- <option disabled selected value style="display:none">-- Wybierz --</option> -->
+                        <option value="1">Podróżniczy</option>
+                        <option value="2">Vlog</option>
+                        <option value="3">Teledysk</option>
+                        <option value="4">Relacja z eventu</option>
                     </select>
-                    <div class="invalid-feedback">Example invalid select feedback</div>
+                    <label for="validationCustom10">Rodzaj filmu</label>
                 </div>
 
-                <div class="mb-3">
-                    <label for="validationTextarea" class="form-label">Treść</label>
-                    <textarea class="form-control" id="validationTextarea" placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
-                    <div class="invalid-feedback">
-                    Please enter a message in the textarea.
-                    </div>
+                <!-- TEXTAREA - TREŚĆ -->
+                <div class="form-floating">
+                    <textarea class="form-control" id="validationCustom11" placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
+                    <label for="validationCustom11" class="form-label">Treść</label>
+
+                    <div class="invalid-feedback">Please enter a message in the textarea.</div>
                 </div>
 
+                <!-- CHECKBOX - POTWIERDZENIE -->
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                        <label class="form-check-label" for="invalidCheck">Potwierdzam dane</label>
+                        <input class="form-check-input" type="checkbox" value="" id="validationCustom12" required />
+                        <label class="form-check-label" for="validationCustom12">Potwierdzam dane</label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                     </div>
                 </div>
 
-
+                <!-- BUTTON - WYŚLIJ -->
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Wyślij</button>
                 </div>
-            </div>
+            
         </form>
     </section>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- GALERIA  -->
-    <section class="container-lg py-5 mb-5" id="galeria">
+    <!-- GALERIA  -->
+    <section class="py-5 mb-5" id="galeria">
         <h1 class="display-5 fw-bold text-center" >Galeria</h1>
-        <div class="container px-5 py-3">
+        <div class="container-lg py-3">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/slider/slide-img-1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/slider/slide-img-2.png" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/slider/slide-img-3.jpg" alt="Third slide">
-                </div>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/slider/slide-img-1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/slider/slide-img-2.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/slider/slide-img-3.jpg" alt="Third slide">
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
     </section>
+
 
     <!-- KONTAKT -->
     <div class="bg-gradient-primary-to-secondary py-5" id="kontakt">
