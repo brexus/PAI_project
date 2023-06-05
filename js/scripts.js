@@ -1,3 +1,7 @@
+import * as bootstrap from 'bootstrap'
+
+
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
