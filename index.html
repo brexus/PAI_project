@@ -128,90 +128,90 @@
                 Chcesz współpracować? Odezwij się!
             </h1>
             
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation" onsubmit="addObjectJSON()" novalidate>
                 <!-- IMIE I NAZWISKO -->
                 <div class="form-floating mb-3 col-md-6">
-                    <input type="text" class="form-control" id="validationCustom01" value=""  placeholder="Jan" pattern="^\S*$" required>
-                    <label for="validationCustom01" class="form-label">Imię</label>
+                    <input type="text" class="form-control" id="input-imie" value=""  placeholder="Jan" pattern="^\S*$" required>
+                    <label for="input-imie" class="form-label">Imię</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę podaj poprawne imię.</div>
                 </div>
 
                 <div class="form-floating mb-3 col-md-6">
-                    <input type="text" class="form-control" id="validationCustom02" value="" placeholder="Nowak" pattern="^\S*$" required>
-                    <label for="validationCustom02" class="form-label">Nazwisko</label>
+                    <input type="text" class="form-control" id="input-nazwisko" value="" placeholder="Nowak" pattern="^\S*$" required>
+                    <label for="input-nazwisko" class="form-label">Nazwisko</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę podaj poprawne nazwisko.</div>
                 </div>
                 
                 <!-- EMAIL -->
                 <div class="form-floating mb-3 col-md-12">
-                    <input type="email" class="form-control" id="validationCustom03" value="" placeholder="name@example.com" pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$" required>
-                    <label for="validationCustom03" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="input-email" value="" placeholder="name@example.com" pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$" required>
+                    <label for="input-email" class="form-label">Email</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę podaj poprawny email.</div>
                 </div>
 
                 <!-- TELEFON -->
                 <div class="form-floating mb-3 col-md-12">
-                    <input type="tel" class="form-control" id="validationCustom04" value="" placeholder="999999999" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
-                    <label for="validationCustom04" class="form-label">Numer telefonu</label>
+                    <input type="tel" class="form-control" id="input-numer" value="" placeholder="999999999" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+                    <label for="input-numer" class="form-label">Numer telefonu</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę podaj poprawny numer telefonu.</div>
                 </div>
 
                 <!-- MIASTO -->
                 <div class="form-floating mb-3 col-md-12">
-                    <input type="text" class="form-control" id="validationCustom05" placeholder="Warszawa" required>
-                    <label for="validationCustom05" class="form-label">Miasto</label>
+                    <input type="text" class="form-control" id="input-miasto" placeholder="Warszawa" required>
+                    <label for="input-miasto" class="form-label">Miasto</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę podaj poprawne miasto.</div>
                 </div>
 
                 <!-- SELECT - RODZAJ FILMU -->
                 <div class="form-floating mb-3">
-                    <select class="form-select" id="validationCustom10" aria-label="Floating label select example">
+                    <select class="form-select" id="input-rodzaj-filmu" name="input-rodzaj-filmu" aria-label="Floating label select example">
                         <!-- <option disabled selected value style="display:none">-- Wybierz --</option> -->
-                        <option value="1">Podróżniczy</option>
-                        <option value="2">Vlog</option>
-                        <option value="3">Teledysk</option>
-                        <option value="4">Relacja z eventu</option>
+                        <option value="podrozniczy">Podróżniczy</option>
+                        <option value="vlog">Vlog</option>
+                        <option value="teledysk">Teledysk</option>
+                        <option value="relacja">Relacja z eventu</option>
                     </select>
-                    <label for="validationCustom10">Rodzaj filmu</label>
+                    <label for="input-rodzaj-filmu">Rodzaj filmu</label>
                 </div>
 
                 <!-- TEXTAREA - TREŚĆ -->
                 <div class="form-floating mb-3 col-md-12">
-                    <textarea class="form-control" id="validationCustom11" placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
-                    <label for="validationCustom11" class="form-label">Treść</label>
+                    <textarea class="form-control" id="input-tresc" placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
+                    <label for="input-tresc" class="form-label">Treść</label>
                     <div class="valid-feedback">Wygląda dobrze!</div>
                     <div class="invalid-feedback">Proszę napisz treść wiadomości.</div>
                 </div>
 
-                <!-- RADIO -->
+                <!-- RADIO - CZAS WYKONANIA -->
                 <div class="form-floating text-center mt-4 mb-3">
                     <h6>Czas wykonania:</h6>
                     <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationCustom06" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationCustom06">Max 5 dni</label>
+                        <input type="radio" class="form-check-input" id="input-czas-wykonania-5-dni" value="5-dni" name="input-czas-wykonania" required>
+                        <label class="form-check-label" for="input-czas-wykonania-5-dni">Max 5 dni</label>
                         <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationCustom07" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationCustom07"> Max 7 dni</label>
+                        <input type="radio" class="form-check-input" id="input-czas-wykonania-7-dni" value="7-dni" name="input-czas-wykonania" required>
+                        <label class="form-check-label" for="input-czas-wykonania-7-dni"> Max 7 dni</label>
                         <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationCustom08" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationCustom08"> Max 10 dni</label>
+                        <input type="radio" class="form-check-input" id="input-czas-wykonania-10-dni" value="10-dni" name="input-czas-wykonania" required>
+                        <label class="form-check-label" for="input-czas-wykonania-10-dni"> Max 10 dni</label>
                         <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
 
                     <div class="form-check mb-3 form-check-inline">
-                        <input type="radio" class="form-check-input" id="validationCustom09" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationCustom09"> Max 14 dni</label>
+                        <input type="radio" class="form-check-input" id="input-czas-wykonania-14-dni" value="14-dni" name="input-czas-wykonania" required>
+                        <label class="form-check-label" for="input-czas-wykonania-14-dni"> Max 14 dni</label>
                         <div class="invalid-feedback">Musisz wybrać jakąś opcję!</div>
                     </div>
                 </div>
@@ -219,8 +219,8 @@
                 <!-- CHECKBOX - POTWIERDZENIE -->
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="validationCustom12" required />
-                        <label class="form-check-label" for="validationCustom12">Potwierdzam dane</label>
+                        <input class="form-check-input" type="checkbox" value="" id="input-potwierdzenie" required />
+                        <label class="form-check-label" for="input-potwierdzenie">Potwierdzam dane</label>
                         <div class="invalid-feedback">Musisz potwierdzić dane.</div>
                     </div>
                 </div>
@@ -234,7 +234,18 @@
     </section>
 
 
-    
+
+    <!-- OGLĄDANIE FORMS  -->
+    <section class="bg-white py-5" id="formularz">
+        <div class="container-md">
+            <h6>Wysłane wiadomości:</h6>
+            <button class="btn btn-primary" onclick="getObjectJSON()">Wyświetl</button>
+            <button class="btn btn-primary" onclick="">Edytuj</button>
+            <button class="btn btn-primary" onclick="deleteObjectJSON()">Usuń wiadomości</button>
+            <div id="objectsJSON"></div>
+        </div>
+    </section>
+
 
 
     <!-- GALERIA  -->
