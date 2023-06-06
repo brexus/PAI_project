@@ -42,7 +42,6 @@ function addObjectJSON() {
 		}
 	}
 
-
 	let czasWykonania = document.getElementsByName('input-czas-wykonania');
 	for(let i = 0; i < czasWykonania.length; i++) {
 		if(czasWykonania[i].checked) item.czasWykonania = czasWykonania[i].value;
@@ -84,8 +83,8 @@ function getObjectJSON() {
 		// content += startCol + startRow + "Treść: " + endRow + startRow + keyValue.tresc + endRow + endCol;
 		// content += startCol + startRow + "Czas wykonania: " + endRow + startRow + keyValue.czasWykonania + endRow + endCol + "<div class='mb-5'></div>";
 		// content += startCol + startRow + `<button class="btn btn-danger" onclick="deleteObjectJSON('${key}')">Usun wpis</button>` + endRow + endCol;
-		content += `<div class='bg-dark px-4 rounded-4'>`;
-		content += `<p class="my-0 mt-5">Imię: ${keyValue.imie}</p>`;
+		content += `<div class='bg-dark px-4 py-4 col d-flex flex-column justify-content-center align-items-center border'>`;
+		content += `<p class="my-0">Imię: ${keyValue.imie}</p>`;
 		content += `<p class="my-0">Nazwisko: ${keyValue.nazwisko}</p>`;
 		content += `<p class="my-0">Email: ${keyValue.email}</p>`;
 		content += `<p class="my-0">Nr. tel: ${keyValue.numer}</p>`;
@@ -93,10 +92,14 @@ function getObjectJSON() {
 		content += `<p class="my-0">Rodzaj filmu: ${keyValue.rodzajFilmu}</p>`;
 		content += `<p class="my-0">Treść: ${keyValue.tresc}</p>`;
 		content += `<p class="my-0">Czas wykonania: ${keyValue.czasWykonania}</p>`;
-		content += `<button class="btn btn-danger" onclick="deleteObjectJSON('${key}')">Usun wpis</button>`;
+		content += `<div>`;
+		content += `<button class="btn btn-danger mt-2" onclick="deleteObjectJSON('${key}')">Usun wpis</button>`;
+		content += `<button class="btn btn-outline-light mt-2" onclick="editObjectJSON('${key}')">Edytuj</button>`;
+		content += `</div>`;
+		content += `</div>`;
 	}
 	content +=  `<p class="mb-5">`;
-	content += `</div>`;
+
  	document.getElementById("objectsJSON").innerHTML = content;
 }
 
@@ -105,19 +108,55 @@ function scrollToForms() {
 	access.scrollIntoView({behavior: 'smooth'}, true);
 }
 
-// function editCart() {
-// 	var item = {};
-// 	item.name = document.getElementById('nazwa_Produktu').value;
-// 	item.cena = document.getElementById('cena').value;
-// 	item.color = document.getElementById('kolor').value;
-// 	item.amount = document.getElementById('ilosc').value;
-// 	localStorage.setItem(item.name, JSON.stringify(item));
-// }
-  
-// function deleteElement() {
-// 	var temp = document.getElementById('nazwa_Produktu').value;
-// 	localStorage.removeItem(temp);
-// }
+
+function editObjectJSON(key) {
+	item = JSON.parse(localStorage.getItem(key));
+	
+	document.getElementById('input-imie').value = item.imie;
+	document.getElementById('input-nazwisko').value = item.nazwisko;
+	document.getElementById('input-email').value = item.email;
+	document.getElementById('input-numer').value = item.numer;
+	document.getElementById('input-miasto').value = item.miasto;
+	document.getElementById('input-tresc').value = item.tresc;
+
+	let rodzajFilmu = String(item.rodzajFilmu);
+
+	for(let i = 0; i < 4; i++) {
+		if(rodzajFilmu == "podrozniczy") {
+			document.getElementById('input-rodzaj-filmu')[0].selected = true;
+		} if (rodzajFilmu == "vlog") {
+			document.getElementById('input-rodzaj-filmu')[1].selected = true;
+		} if (rodzajFilmu == "teledysk") {
+			document.getElementById('input-rodzaj-filmu')[2].selected = true;
+		} if (rodzajFilmu == "relacja") {
+			document.getElementById('input-rodzaj-filmu')[3].selected = true;
+		}
+	}
+
+	let czasWykonania = String(item.czasWykonania);
+	for(let i = 0; i < 4; i++) {
+		if(czasWykonania == "5-dni") {
+			document.getElementById('input-czas-wykonania-5-dni').checked = true;
+		} if (czasWykonania == "7-dni") {
+			document.getElementById('input-czas-wykonania-7-dni').checked = true;
+		} if (czasWykonania == "10-dni") {
+			document.getElementById('input-czas-wykonania-10-dni').checked = true;
+		} if (czasWykonania == "14-dni") {
+			document.getElementById('input-czas-wykonania-14-dni').checked = true;
+		}
+	}
+
+	scrollToForms();
+}
+
+
+
+
+
+
+
+
+
   
 // function searchElement() {
 // 	var name = document.getElementById('nazwa_Produktu').value;
