@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Montaż filmów - SW</title>
     
     <!-- Moj CSS -->
@@ -11,24 +11,21 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
-    
-
 </head>
 
 <body id="page-top">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top shadow-lg bg-indyk" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-indyk sticky-top shadow-lg" aria-label="Fourth navbar example">
         <div class="container-md">
-            <a class="navbar-brand" href="#">
-                <img class="navbar-brand small-icon" src="/img/logo1.png" alt="">
+            <a class="navbar-brand" id="brand-logo-title" href="#">
+                <img src="/img/logo1.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
                 Szymon Wierzchoś
             </a>
 
@@ -71,11 +68,11 @@
                         <h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">Montuję filmy.</h1>
                         <p class="lead fw-normal mb-5 ">Zajmuje się montowaniem przeróżnych filmów! Od podróżniczych po teledyski muzyczne!</p>
                         
-                        <a href="#formularz">
-                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-3">
-                                Napisz do mnie!
-                            </button>
-                        </a>
+                        
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-3" onclick="scrollToForms()">
+                            Napisz do mnie!
+                        </button>
+                        
                     </div>
                 </div>
 
@@ -109,7 +106,7 @@
         <div class="container-md">
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">O mnie</h1>
+                    <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">O mnie</h2>
                     <p class="lead fw-n"> Jestem filmowcem z pasją i doświadczeniem, zajmującym się montażem filmów od wielu lat. Moje umiejętności i wiedza w tej dziedzinie pozwalają mi tworzyć niezapomniane filmy, które oddają emocje i narrację w sposób pełen wizji artystycznej. Montażem zajmuję się od blisko 9 lat i dalej się w tym rozwijam.</p>
                 </div>
                 <div class="col-lg-6">
@@ -124,11 +121,11 @@
     <!-- FORMULARZ -->
     <section class="bg-light py-5" id="formularz">
         <div class="container">
-            <h1 class="display-6 fw-bold text-center pb-4">
+            <h2 class="display-6 fw-bold text-center pb-4">
                 Chcesz współpracować? Odezwij się!
-            </h1>
+            </h2>
             
-            <form class="row g-3 needs-validation" method="#" onsubmit="addObjectJSON()" novalidate>
+            <form class="row g-3 needs-validation" method="get" onsubmit="addObjectJSON()" novalidate>
                 <!-- IMIE I NAZWISKO -->
                 <div class="form-floating mb-3 col-md-6">
                     <input type="text" class="form-control" id="input-imie" value=""  placeholder="Jan" pattern="^\S*$" required>
@@ -171,7 +168,6 @@
                 <!-- SELECT - RODZAJ FILMU -->
                 <div class="form-floating mb-3">
                     <select class="form-select" id="input-rodzaj-filmu" name="input-rodzaj-filmu" aria-label="Floating label select example">
-                        <!-- <option disabled selected value style="display:none">-- Wybierz --</option> -->
                         <option value="podrozniczy">Podróżniczy</option>
                         <option value="vlog">Vlog</option>
                         <option value="teledysk">Teledysk</option>
@@ -219,7 +215,7 @@
                 <!-- CHECKBOX - POTWIERDZENIE -->
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="input-potwierdzenie" required />
+                        <input class="form-check-input" type="checkbox" value="" id="input-potwierdzenie" required>
                         <label class="form-check-label" for="input-potwierdzenie">Potwierdzam dane</label>
                         <div class="invalid-feedback">Musisz potwierdzić dane.</div>
                     </div>
@@ -229,16 +225,13 @@
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Wyślij</button>
                 </div>
-            </div>
-        </form>
-
-
-
+            </form>
+        </div>
     </section>
 
 
     <!-- PRZEGLĄDANIE WYSŁANYCH FORMULARZY  -->
-    <section class="bg-primary" id="formularz">
+    <section class="bg-secondary">
         <div class="container-md py-4 text-center" >
             <h6 class="text-white">Przeglądanie wysłanych formularzy:</h6>
             <button class="btn btn-outline-light my-3 mx-1" onclick="getObjectJSON()">Wyświetl</button>
@@ -249,10 +242,9 @@
     </section>
 
 
-
     <!-- GALERIA  -->
     <section class="py-5 mb-5" id="galeria">
-    <h1 class="display-5 fw-bold text-center" >Galeria</h1>
+    <h2 class="display-5 fw-bold text-center" >Galeria</h2>
         <div class="container-lg py-3">
             <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
                 <div class="carousel-indicators">
@@ -287,7 +279,7 @@
     <!-- KONTAKT -->
     <div class="bg-gradient-primary-to-secondary py-5" id="kontakt">
         <div class="container px-5">
-            <h1 class="display-5 fw-bold text-center text-white pb-3" >Kontakt</h1>
+            <h2 class="display-5 fw-bold text-center text-white pb-3" >Kontakt</h2>
             <div class="row gx-4 align-items-center text-white">    
                 <div class="col-lg-4 h4 text-center pb-3">
                     📞 Nr telefonu:
@@ -315,7 +307,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="bg-black text-center py-5">
+    <footer class="bg-dark text-center py-5">
         <div class="container-md px-5">
             <div class="text-white-50 small">
                 <div class="mb-2">&copy; Szymon Wierzchoś. All Rights Reserved.</div>
@@ -329,10 +321,7 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/scripts.js"></script>
 </body>
 </html>

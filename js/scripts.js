@@ -100,6 +100,10 @@ function getObjectJSON() {
  	document.getElementById("objectsJSON").innerHTML = content;
 }
 
+function scrollToForms() {
+	var access = document.getElementById("formularz");
+	access.scrollIntoView({behavior: 'smooth'}, true);
+}
 
 // function editCart() {
 // 	var item = {};
