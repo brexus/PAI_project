@@ -1,4 +1,5 @@
 # PAI_project
-This is a project for studies on the subject of Fundamentals of Internet Applications /n
+This is a project for studies on the subject of Fundamentals of Internet Applications
+
 Live view:
 https://brexus.github.io/PAI_project/
