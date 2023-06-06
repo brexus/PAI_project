@@ -128,7 +128,7 @@
                 Chcesz współpracować? Odezwij się!
             </h1>
             
-            <form class="row g-3 needs-validation" onsubmit="addObjectJSON()" novalidate>
+            <form class="row g-3 needs-validation" method="#" onsubmit="addObjectJSON()" novalidate>
                 <!-- IMIE I NAZWISKO -->
                 <div class="form-floating mb-3 col-md-6">
                     <input type="text" class="form-control" id="input-imie" value=""  placeholder="Jan" pattern="^\S*$" required>
@@ -231,18 +231,20 @@
                 </div>
             </div>
         </form>
+
+
+
     </section>
 
 
-
-    <!-- OGLĄDANIE FORMS  -->
-    <section class="bg-white py-5" id="formularz">
-        <div class="container-md">
-            <h6>Wysłane wiadomości:</h6>
-            <button class="btn btn-primary" onclick="getObjectJSON()">Wyświetl</button>
-            <button class="btn btn-primary" onclick="">Edytuj</button>
-            <button class="btn btn-primary" onclick="deleteObjectJSON()">Usuń wiadomości</button>
-            <div id="objectsJSON"></div>
+    <!-- PRZEGLĄDANIE WYSŁANYCH FORMULARZY  -->
+    <section class="bg-primary" id="formularz">
+        <div class="container-md py-4 text-center" >
+            <h6 class="text-white">Przeglądanie wysłanych formularzy:</h6>
+            <button class="btn btn-outline-light my-3 mx-1" onclick="getObjectJSON()">Wyświetl</button>
+            <button class="btn btn-outline-light my-3 mx-1" onclick="">Edytuj</button>
+            <button class="btn btn-danger my-3 mx-1" onclick="deleteAllObjectsJSON()">Usuń wiadomości</button>
+            <div id="objectsJSON" class="text-white d-flex flex-column justify-content-center align-items-center"></div>
         </div>
     </section>
 
@@ -252,13 +254,13 @@
     <section class="py-5 mb-5" id="galeria">
     <h1 class="display-5 fw-bold text-center" >Galeria</h1>
         <div class="container-lg py-3">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner rounded-2">
                     <div class="carousel-item active">
                     <img src="img/slider/slide-img-1.jpg" class="d-block w-100" alt="...">
                     </div>

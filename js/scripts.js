@@ -51,8 +51,15 @@ function addObjectJSON() {
 	localStorage.setItem(item.nazwisko, JSON.stringify(item));
 }
 
-function deleteObjectJSON() {
+function deleteAllObjectsJSON() {
 	localStorage.clear();
+	getObjectJSON();
+
+}
+
+function deleteObjectJSON(key) {
+	localStorage.removeItem(String(key));
+	getObjectJSON();
 }
 
 
@@ -67,20 +74,33 @@ function getObjectJSON() {
     for (var i = 0; i < localStorage.length; i++) {
      	var key = localStorage.key(i),
 		keyValue = JSON.parse(localStorage.getItem(key));
-		content += startTab + startCol + startRow + "Imie" + endRow + startRow + keyValue.imie + endRow + endCol;
-		content += startCol + startRow + "Nazwisko: " + endRow + startRow + keyValue.nazwisko + endRow + endCol;
-		content += startCol + startRow + "Email: " + endRow + startRow + keyValue.email + endRow + endCol;
-		content += startCol + startRow + "Nr. tel: " + endRow + startRow + keyValue.numer + endRow + endCol;
-		content += startCol + startRow + "Miasto: " + endRow + startRow + keyValue.miasto + endRow + endCol;
-		content += startCol + startRow + "Rodzaj filmu: " + endRow + startRow + keyValue.rodzajFilmu + endRow + endCol;
-		content += startCol + startRow + "Treść: " + endRow + startRow + keyValue.tresc + endRow + endCol;
-		content += startCol + startRow + "Czas wykonania: " + endRow + startRow + keyValue.czasWykonania + endRow + endCol + "<div class='mb-5'></div>";
-    }
 
-  document.getElementById("objectsJSON").innerHTML = content;
-
+		// content += startTab + startCol + startRow + "Imie" + endRow + startRow + keyValue.imie + endRow + endCol;
+		// content += startCol + startRow + "Nazwisko: " + endRow + startRow + keyValue.nazwisko + endRow + endCol;
+		// content += startCol + startRow + "Email: " + endRow + startRow + keyValue.email + endRow + endCol;
+		// content += startCol + startRow + "Nr. tel: " + endRow + startRow + keyValue.numer + endRow + endCol;
+		// content += startCol + startRow + "Miasto: " + endRow + startRow + keyValue.miasto + endRow + endCol;
+		// content += startCol + startRow + "Rodzaj filmu: " + endRow + startRow + keyValue.rodzajFilmu + endRow + endCol;
+		// content += startCol + startRow + "Treść: " + endRow + startRow + keyValue.tresc + endRow + endCol;
+		// content += startCol + startRow + "Czas wykonania: " + endRow + startRow + keyValue.czasWykonania + endRow + endCol + "<div class='mb-5'></div>";
+		// content += startCol + startRow + `<button class="btn btn-danger" onclick="deleteObjectJSON('${key}')">Usun wpis</button>` + endRow + endCol;
+		content += `<div class='bg-dark px-4 rounded-4'>`;
+		content += `<p class="my-0 mt-5">Imię: ${keyValue.imie}</p>`;
+		content += `<p class="my-0">Nazwisko: ${keyValue.nazwisko}</p>`;
+		content += `<p class="my-0">Email: ${keyValue.email}</p>`;
+		content += `<p class="my-0">Nr. tel: ${keyValue.numer}</p>`;
+		content += `<p class="my-0">Miasto: ${keyValue.miasto}</p>`;
+		content += `<p class="my-0">Rodzaj filmu: ${keyValue.rodzajFilmu}</p>`;
+		content += `<p class="my-0">Treść: ${keyValue.tresc}</p>`;
+		content += `<p class="my-0">Czas wykonania: ${keyValue.czasWykonania}</p>`;
+		content += `<button class="btn btn-danger" onclick="deleteObjectJSON('${key}')">Usun wpis</button>`;
+	}
+	content +=  `<p class="mb-5">`;
+	content += `</div>`;
+ 	document.getElementById("objectsJSON").innerHTML = content;
 }
-  
+
+
 // function editCart() {
 // 	var item = {};
 // 	item.name = document.getElementById('nazwa_Produktu').value;
