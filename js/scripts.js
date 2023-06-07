@@ -1,12 +1,9 @@
  
- // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict'
   
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
   
-    // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
 		form.addEventListener('submit', event => {
 			if (!form.checkValidity()) {
@@ -74,15 +71,6 @@ function getObjectJSON() {
      	var key = localStorage.key(i),
 		keyValue = JSON.parse(localStorage.getItem(key));
 
-		// content += startTab + startCol + startRow + "Imie" + endRow + startRow + keyValue.imie + endRow + endCol;
-		// content += startCol + startRow + "Nazwisko: " + endRow + startRow + keyValue.nazwisko + endRow + endCol;
-		// content += startCol + startRow + "Email: " + endRow + startRow + keyValue.email + endRow + endCol;
-		// content += startCol + startRow + "Nr. tel: " + endRow + startRow + keyValue.numer + endRow + endCol;
-		// content += startCol + startRow + "Miasto: " + endRow + startRow + keyValue.miasto + endRow + endCol;
-		// content += startCol + startRow + "Rodzaj filmu: " + endRow + startRow + keyValue.rodzajFilmu + endRow + endCol;
-		// content += startCol + startRow + "Treść: " + endRow + startRow + keyValue.tresc + endRow + endCol;
-		// content += startCol + startRow + "Czas wykonania: " + endRow + startRow + keyValue.czasWykonania + endRow + endCol + "<div class='mb-5'></div>";
-		// content += startCol + startRow + `<button class="btn btn-danger" onclick="deleteObjectJSON('${key}')">Usun wpis</button>` + endRow + endCol;
 		content += `<div class='bg-dark px-4 py-4 col d-flex flex-column justify-content-center align-items-center border'>`;
 		content += `<p class="my-0">Imię: ${keyValue.imie}</p>`;
 		content += `<p class="my-0">Nazwisko: ${keyValue.nazwisko}</p>`;
@@ -149,35 +137,14 @@ function editObjectJSON(key) {
 	scrollToForms();
 }
 
+let map;
 
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  map = new Map(document.getElementById("map"), {
+    center: { lat: 51.235241403728224, lng: 22.548898537439825 },
+    zoom: 16,
+  });
+}
 
-
-
-
-
-
-
-  
-// function searchElement() {
-// 	var name = document.getElementById('nazwa_Produktu').value;
-// 	var temp = JSON.parse(localStorage.getItem(name));
-// 	if (temp === null) {
-// 		document.getElementById("cart").innerHTML = 'Taki produkt nie istnieje';
-// 	} else {
-// 		document.getElementById("cart").innerHTML = '';
-// 		var content = '' ,
-// 		startTab = "<table>",
-// 		startCol = "<tr>",
-// 		startRow = "<td>",
-// 		endRow = "</td>",
-// 		endCol = "</tr>",
-// 		endTab = "</table> <br>";
-// 		content += startTab + startCol + startRow + "Nazwa Produktu: " + endRow + startRow + temp.name + endRow + endCol;
-// 		content += startCol + startRow + "Cena: " + endRow + startRow + temp.cena + endRow + endCol;
-// 		content += startCol + startRow + "Kolor: " + endRow + startRow + temp.color + endRow + endCol;
-// 		content += startCol + startRow + "liczba sztuk: " + endRow + startRow + temp.amount + endRow + endCol + endTab;
-// 		document.getElementById("cart").innerHTML = content;
-// 	}
-// }
-  
-
+initMap();
