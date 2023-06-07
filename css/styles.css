@@ -58,6 +58,9 @@
     color: red;
 }
 
-#brand-logo-title:hover {
-    
+.carousel-control-next-icon-bigger {
+    height: 50px;
+    width: 50px;
+    background-color:black;
+    border-radius: 15px;
 }
