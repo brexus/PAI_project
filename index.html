@@ -12,6 +12,9 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet">
@@ -26,10 +29,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-dark bg-indyk sticky-top shadow-lg" aria-label="Fourth navbar example">
         <div class="container-md">
-            <a class="navbar-brand" id="brand-logo-title" href="#">
-                <img src="img/logo2.png" alt="Logo" width="40" height="40" class="d-inline-block "> 
+            <a class="navbar-brand fw-bold font-apple fs-4 zoom" id="brand-logo-title" href="#">
+                <img src="img/logo3.png" alt="Logo" width="40" height="40" class="d-inline-block "> 
                 <!-- align-text-top -->
-                Szymon Wierzchoś
+                brexus
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +40,7 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarsExample04">
-                <ul class="navbar-nav mb-2 mb-md-0">
+                <ul class="navbar-nav mb-2 mb-md-0 fw-b">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -65,7 +68,7 @@
         <div class="container-xxl py-4">
             <div class="row gx-5 align-items-center">
 
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
                         <h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">Montuję filmy.</h1>
@@ -79,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
                     <div class="container"> 
                         <img class="w-100" src="img/laptop-1.png" alt="">
                     </div>
@@ -89,10 +92,9 @@
         </div>
     </header>
 
-
     <!-- KOLOROWA -->
     <section class="text-center bg-gradient-primary-to-secondary">
-        <div class="container px-1 py-5">
+        <div class="container px-1 py-5" data-aos="fade-up" data-aos-delay="300">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xl-10 font-roboto">
                     <p class="fs-3 text-white mb-4">
@@ -103,16 +105,17 @@
         </div>
     </section>
 
+    
 
     <!-- O MNIE -->
     <section class="container col-xxl-8 px-4 py-5" id="omnie">
         <div class="container-md">
             <div class="row flex-lg-row align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">O mnie</h2>
                     <p class="lead fw-n"> Jestem filmowcem z pasją i doświadczeniem, zajmującym się montażem filmów od wielu lat. Moje umiejętności i wiedza w tej dziedzinie pozwalają mi tworzyć niezapomniane filmy, które oddają emocje i narrację w sposób pełen wizji artystycznej. Montażem zajmuję się od blisko 9 lat i dalej się w tym rozwijam.</p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                     <div class="px-5 px-sm-0"><img class="img-fluid rounded-5" src="img/stock/2.webp" alt="..." ></div>
                 </div>
             </div>
@@ -124,11 +127,11 @@
     <!-- FORMULARZ -->
     <section class="bg-light py-5" id="formularz">
         <div class="container">
-            <h2 class="display-6 fw-bold text-center pb-4">
+            <h2 class="display-6 fw-bold text-center pb-4" data-aos="fade-up" data-aos-delay="100">
                 Chcesz współpracować? Odezwij się!
             </h2>
-            
-            <form class="row g-3 needs-validation" method="get" onsubmit="addObjectJSON()" novalidate>
+            <!-- <h2 class="hero__text aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400">Animate On Scroll <span>Library</span></h2> -->
+            <form class="row g-3 needs-validation" method="get" onsubmit="addObjectJSON()" novalidate data-aos="fade-up" data-aos-delay="300">
                 <!-- IMIE I NAZWISKO -->
                 <div class="form-floating mb-3 col-md-6">
                     <input type="text" class="form-control" id="input-imie" value=""  placeholder="Jan" pattern="^\S*$" required>
@@ -236,10 +239,10 @@
 
     <!-- PRZEGLĄDANIE WYSŁANYCH FORMULARZY  -->
     <section class="bg-secondary">
-        <div class="container-md py-4 text-center" >
-            <h6 class="text-white">Przeglądanie wysłanych formularzy:</h6>
-            <button class="btn btn-outline-light my-3 mx-1" onclick="getObjectJSON()">Wyświetl wszystkie</button>
-            <button class="btn btn-danger my-3 mx-1" onclick="deleteAllObjectsJSON()">Usuń wszystkie</button>
+        <div class="container-md py-4 text-center">
+            <h6 class="text-white" data-aos="fade-up" data-aos-delay="100">Przeglądanie wysłanych formularzy:</h6>
+            <button class="btn btn-outline-light my-3 mx-1" onclick="getObjectJSON()" data-aos="fade-right" data-aos-delay="300">Wyświetl wszystkie</button>
+            <button class="btn btn-danger my-3 mx-1" onclick="deleteAllObjectsJSON()" data-aos="fade-left" data-aos-delay="300">Usuń wszystkie</button>
             <!-- <div id="objectsJSON" class="text-white d-flex flex-column justify-content-center align-items-center"></div> -->
             <div id="objectsJSON" class="text-white row"></div>
         </div>
@@ -248,8 +251,8 @@
 
     <!-- GALERIA  -->
     <section class="py-5 mb-5" id="galeria">
-    <h2 class="display-5 fw-bold text-center" >Galeria</h2>
-        <div class="container-lg py-3">
+        <h2 class="display-5 fw-bold text-center" data-aos="fade-up" data-aos-delay="100">Galeria</h2>
+        <div class="container-lg py-3" data-aos="fade-up" data-aos-delay="300">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -295,19 +298,19 @@
     <!-- KONTAKT -->
     <div class="bg-gradient-primary-to-secondary py-5" id="kontakt">
         <div class="container px-5">
-            <h2 class="display-5 fw-bold text-center text-white pb-3" >Kontakt</h2>
+            <h2 class="display-5 fw-bold text-center text-white pb-3" data-aos="fade-up" data-aos-delay="100">Kontakt</h2>
             <div class="row gx-4 align-items-center text-white">    
-                <div class="col-lg-4 h4 text-center pb-3">
+                <div class="col-lg-4 h4 text-center pb-3" data-aos="fade-up" data-aos-delay="200">
                     📞 Nr telefonu:
                     <div class="fw-normal h6 pt-4"> 632 573 962 </div>
                 </div>
 
-                <div class="col-lg-4 h4 text-center pb-3">
+                <div class="col-lg-4 h4 text-center pb-3" data-aos="fade-up" data-aos-delay="200">
                     📍 Adres:
                     <div class="fw-normal h6 pt-4"> Lublin, ul. Nadbystrzycka 36 </div>
                 </div>
 
-                <div class="col-lg-4 h4 text-center pb-3">
+                <div class="col-lg-4 h4 text-center pb-3" data-aos="fade-up" data-aos-delay="200">
                     📧 Email:
                     <div class="fw-normal h6 pt-4"> s97764@pollub.edu.pl </div>
                 </div>
@@ -333,6 +336,7 @@
     </footer>
 
 
+    <!-- SCROLL BACK TO TOP BUTTON -->
     <button type="button" class="btn bg-gradient-primary-to-secondary btn-lg rounded-circle" id="btn-back-to-top">
         
         <i class="bi">
@@ -341,13 +345,18 @@
             </svg>
         </i>
     </button>
-      
 
 
     <!-- SCRIPTS -->
     <script defer src="js/bootstrap.bundle.min.js"></script>
     <script defer src="js/scripts.js"></script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: window.innerWidth < 768,
+        });
+    </script>
+
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyCvt4xqtYSaE4UjlZq_uC76wWN0MZqTB2M", v: "weekly"});</script> <!-- AIzaSyCvt4xqtYSaE4UjlZq_uC76wWN0MZqTB2M -->
 </body>

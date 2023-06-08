@@ -36,7 +36,8 @@
 }
 
 .font-apple {
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -74,4 +75,10 @@
     bottom: 30px;
     right: 30px;
     display: none;
+}
+
+.zoom:hover {
+    transform: scale(1.03);
+    transition: transform .2s;
+    text-shadow: 0 0 7px #ffffff;
 }
