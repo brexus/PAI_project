@@ -1,4 +1,4 @@
-# Project Title
+# PAI Project
 
 This is a project for studies on the subject of Fundamentals of Internet Applications. This is a website for a person who edits films on commission. This is an information page with the possibility of contact.
 
