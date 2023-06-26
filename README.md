@@ -8,7 +8,7 @@ https://brexus.github.io/PAI_project/
 
 ## Tech Stack
 
-Bootstrap 5.3
+HTML, CSS, JavaScript, Bootstrap 5.3
 
 ## Screenshots
 
