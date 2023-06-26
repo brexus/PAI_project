@@ -68,7 +68,11 @@
 
 #map {
     height: 100%;
-  }
+}
+
+#formularz, #omnie, #galeria, #kontakt{
+    scroll-margin-top: 50px;
+}
 
 #btn-back-to-top {
     position: fixed;
